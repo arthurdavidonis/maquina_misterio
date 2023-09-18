@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="fotos/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1{
+            margin-top: 15px;
+            color: white;
+            text-align: center;
+
+        }
+        h2{
+            text-align: center;
+            padding: 8px;
+            
+        }
+        body{
+            background-color: #593122;
+        }
+        .box{
+            display: flex;
+            color: white;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 15px;
+          
+            
+        }
+        .box1{
+            background-color: #40352C;
+            height: 258px;
+            border-radius: 10px;
+            --main-color: #fefefe;
+            box-shadow: 4px 4px #D9A78B;
+            width: 260px;
+            margin: 15px;
+            
+        }
+        .box2{
+            background-color: #40352C;
+            height: 258px;
+            border-radius: 10px;
+            --main-color: #fefefe;
+            box-shadow: 4px 4px #D9A78B;
+            width: 260px;
+            margin: 15px;
+        }
+       
+
+        .cardap{
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+        }
+        .value{
+            text-align: center;
+            padding-top: 20px;
+            font-weight: bold;
+        }
+        .info_produto{
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        section{
+            color: white;
+            max-width: 700px;
+            margin: auto;
+            background-color: #40352C;
+            border-radius: 10px;
+           padding: 25px;
+            
+
+        }
+
+        section > p{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+
+
+
+
+        .card,
+.card__chip {
+  overflow: hidden;
+  position: relative;
+}
+
+.card,
+.card__chip-texture,
+.card__texture {
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.card {
+  animation-name: rotate_500;
+  background-color: var(--primary);
+  background-image: radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 29.5%,hsla(0,0%,100%,0) 30%),
+        radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 39.5%,hsla(0,0%,100%,0) 40%),
+        radial-gradient(circle at 100% 0%,hsla(0,0%,100%,0.08) 49.5%,hsla(0,0%,100%,0) 50%);
+  border-radius: 0.5em;
+  box-shadow: 0 0 0 hsl(0,0%,80%),
+        0 0 0 hsl(0,0%,100%),
+        -0.2rem 0 0.75rem 0 hsla(0,0%,0%,0.3);
+  color: hsl(0,0%,100%);
+  width: 10.3em;
+  height: 6.8em;
+  transform: translate3d(0,0,0);
+  background-color: black;
+  
+}
+
+.card__info,
+.card__chip-texture,
+.card__texture {
+  position: absolute;
+}
+
+.card__chip-texture,
+.card__texture {
+  animation-name: texture;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+.card__info {
+  font: 0.75em/1 "DM Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  inset: 0;
+}
+
+.card__logo,
+.card__number {
+  width: 100%;
+}
+
+.card__logo {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card__chip {
+  background-image: linear-gradient(hsl(0,0%,70%),hsl(0,0%,80%));
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.05rem hsla(0,0%,0%,0.5) inset;
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: translate3d(0,0,0);
+}
+
+.card__chip-lines {
+  width: 100%;
+  height: auto;
+}
+
+.card__chip-texture {
+  background-image: linear-gradient(-80deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0.6) 48% 52%,hsla(0,0%,100%,0));
+}
+
+.card__type {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.card__digit-group,
+.card__exp-date,
+.card__name {
+  background: linear-gradient(hsl(0,0%,100%),hsl(0,0%,85%) 15% 55%,hsl(0,0%,70%) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Courier Prime", monospace;
+  filter: drop-shadow(0 0.05rem hsla(0,0%,0%,0.3));
+}
+
+.card__number {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__valid-thru,
+.card__name {
+  text-transform: uppercase;
+}
+
+.card__valid-thru,
+.card__exp-date {
+  margin-bottom: 0.25rem;
+  width: 50%;
+}
+
+.card__valid-thru {
+  font-size: 0.3rem;
+  padding-right: 0.25rem;
+  text-align: right;
+}
+
+.card__exp-date,
+.card__name {
+  font-size: 0.6rem;
+}
+
+.card__exp-date {
+  padding-left: 0.25rem;
+}
+
+.card__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 6.25rem;
+}
+
+.card__vendor,
+.card__vendor:before,
+.card__vendor:after {
+  position: absolute;
+}
+
+.card__vendor {
+  right: 0.375rem;
+  bottom: 0.375rem;
+  width: 2.55rem;
+  height: 1.5rem;
+}
+
+.card__vendor:before,
+.card__vendor:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.card__vendor:before {
+  background-color: #e71d1a;
+  left: 0;
+}
+
+.card__vendor:after {
+  background-color: #fa5e03;
+  box-shadow: -1.05rem 0 0 #f59d1a inset;
+  right: 0;
+}
+
+.card__vendor-sr {
+  clip: rect(1px,1px,1px,1px);
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+.card__texture {
+  animation-name: texture;
+  background-image: linear-gradient(-80deg,hsla(0,0%,100%,0.3) 25%,hsla(0,0%,100%,0) 45%);
+}
+ 
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(var(--hue),10%,30%);
+    --fg: hsl(var(--hue),10%,90%);
+  }
+}
+
+/* Animation */
+@keyframes rotate_500 {
+  from,
+    to {
+    animation-timing-function: ease-in;
+    box-shadow: 0 0 0 hsl(0,0%,80%),
+            0.1rem 0 0 hsl(0,0%,100%),
+            -0.2rem 0 0.75rem 0 hsla(0,0%,0%,0.3);
+    transform: rotateY(-10deg);
+  }
+
+  25%,
+    75% {
+    animation-timing-function: ease-out;
+    box-shadow: 0 0 0 hsl(0,0%,80%),
+            0 0 0 hsl(0,0%,100%),
+            -0.25rem -0.05rem 1rem 0.15rem hsla(0,0%,0%,0.3);
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    animation-timing-function: ease-in;
+    box-shadow: -0.1rem 0 0 hsl(0,0%,80%),
+            0 0 0 hsl(0,0%,100%),
+            -0.3rem -0.1rem 1.5rem 0.3rem hsla(0,0%,0%,0.3);
+    transform: rotateY(10deg);
+  }
+}
+
+@keyframes texture {
+  from,
+    to {
+    transform: translate3d(0,0,0);
+  }
+
+  50% {
+    transform: translate3d(-50%,0,0);
+  }
+}  
+
+
+li{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.retirar_produto{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+i{
+    padding: 8px;
+    color: green;
+}
+
+.retired > p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+button {
+  --bg: #BF8E63;
+  --text-color: #fff;
+  position: relative;
+  width: 100px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #BF8E63 0px 7px 2px, #000 0px 8px 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  top: 4px;
+  box-shadow: #593B2A 0px 3px 2px,#000 0px 3px 5px;
+}
+
+.btn_back{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.sub{
+  text-decoration: underline;
+}
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1 >Nosso cardápio</h1>
+
+    <div class="box">
+        <div class="box1">
+            <h2 class="cardap">Combo </h2>
+            <p class="info_produto">Acompanha cachorro-quente, suco de uva ou maracujá e um elemento surpresa.</p>
+            <p class="value">Valor: R$10,00 ou R$12,00 <br> OBS: com adicional de bacon +R$2</p>
+
+        </div>
+        
+        <div class="box2">
+            <h2 class="cardap">Cachorro-quente</h2>
+            <p class="info_produto">Acompanha apenas o cachorro-quente.</p>
+            <p class="value">Valor: R$8,00 ou R$10,00 <br> OBS: com adicional de bacon +R$2</p>
+        </div>
+        
+
+    </div>
+
+    <section>
+        <h2>Sobre os produtos🌭:</h2>
+        <p>Nosso cachorro-quente tem os seguintes ingredientes: pão, molho de tomate,batata palha, salsicha, purê de batata, milho. Caso queira, você pode <strong>retirar algum ingrediente que não goste, basta chegar ao caixa e pedir para que o seu cachorro-quente não tenha milho por exemplo. <div class="sub"><p>Porém vale lembrar que caso queira retirar algo o valor não sofrerá alterações, esta é apenas uma opção disponível para atender aos diferentes gostos.</p></div></strong>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2><i class="bi bi-wallet2"></i>Informações sobre pagamento<i class="bi bi-cash-coin"></i>: </h2>
+
+        <div class="card">
+            <div class="card__info">
+                <div class="card__logo">MasterCard</div>
+                <div class="card__chip">
+                    <svg class="card__chip-lines" role="img" width="20px" height="20px" viewBox="0 0 100 100" aria-label="Chip">
+                        <g opacity="0.8">
+                            <polyline points="0,50 35,50" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="0,20 20,20 35,35" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="50,0 50,35" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="65,35 80,20 100,20" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="100,50 65,50" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="35,35 65,35 65,65 35,65 35,35" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="0,80 20,80 35,65" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="50,100 50,65" fill="none" stroke="#000" stroke-width="2"></polyline>
+                            <polyline points="65,65 80,80 100,80" fill="none" stroke="#000" stroke-width="2"></polyline>
+                        </g>
+                    </svg>
+                    <div class="card__chip-texture"></div>
+                </div>
+                  <div class="card__type">3º B  ADM</div>
+                  <div class="card__number">
+                    <span class="card__digit-group">Máquina</span>
+                    <span class="card__digit-group">Mistério</span>
+                    <span class="card__digit-group"></span>
+                    <span class="card__digit-group"></span>
+                </div>
+                  <div class="card__valid-thru" aria-label="Valid thru">Valid<br>thru</div>
+                  <div class="card__exp-date"><time datetime="2038-01">2023</time></div>
+                  <div class="card__name" aria-label="Dee Stroyer">Ciclo de Palestras</div>
+                  <div class="card__vendor" role="img" aria-labelledby="card-vendor">
+                  <span id="card-vendor" class="card__vendor-sr">MasterCard</span>
+                </div>
+            <div class="card__texture"></div>
+                    </div>
+                        </div>
+
+
+
+
+
+
+
+        <p>Em nossa empresa os seguintes métodos de pagamento serão aceitos:
+            <ul>
+                <li>Pix</li>
+                <li>Dinheiro</li>
+                <li>Cartão de débito</li>
+                <li>Cartão de crédito</li>
+            </ul>
+        </p>
+
+        <div class="retired">
+            <h2 class="retirar_produto">Informações sobre a retirada do seu produto <i class="bi bi-cart-check-fill"></i>:</h2>
+            <p>A fila de pagamento e de retirada do seu produto ficará uma do lado da outra, vale lembrar que não será aceito comprar seu produto e fazer a retirada em outro momento, pois acaba gerando atraso nos pedidos de outras pessoas e tumulto na fila. Por isso pedimos para que quando comprar não demore para ir na fila de retirada. Caso seu nome seja chamado na fila e você não estiver presente seu hot-dog ficará esperando por você e não serão aceitas reclamações caso sua comida esteja fria. Respeite a fila e novamente, caso seu nome seja chamado e você não estiver na fila seu hot-dog corre o risco de esfriar. <br>
+            <strong>Atenciosamente, equipe Máquina Místerio.</strong></p>
+        </div>
+
+
+
+        <div class="btn_back">
+          <a href="index.html">
+              <button>
+                   Menu
+              </button>
+          </a>
+      </div>
+
+    </section>
+
+    
+    
+</body>
+</html>
